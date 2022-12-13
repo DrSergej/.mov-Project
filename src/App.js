@@ -9,13 +9,13 @@ import Overview from "./pages/Overview";
 function App() {
 	return (
 		<div className="App">
-			<Home />
 			<BrowserRouter>
+				<Overview />
 				<Routes>
 					<Route path="/" element={<LandingPage />} />
 					<Route path="/home" element={<Home />} />
 					<Route path="/overview" element={<Overview />} />
-					<Route path="/details" element={<MovieDetailsPage />} />
+					<Route path="/details/:id" element={<MovieDetailsPage />} />
 					<Route path="/trailer" element={<MovieTrailerPage />} />
 				</Routes>
 			</BrowserRouter>
