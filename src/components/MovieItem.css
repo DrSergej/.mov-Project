@@ -1,0 +1,39 @@
+.movie-item img {
+	height: 200px;
+	text-align: center;
+	border-radius: 15px;
+}
+
+.movie-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	margin-bottom: 20px;
+	margin: 0 auto 20px;
+	width: 90%;
+}
+
+.movie-item .flex-row__one {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 20px;
+	width: 100%;
+}
+
+.movie-item .genres {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.movie-data__wrapper {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.movie-item span {
+	margin-right: 10px;
+}
