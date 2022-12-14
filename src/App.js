@@ -35,24 +35,23 @@ function App() {
 				<i className="btn btn2"></i>
 				<i className="btn btn3"></i>
 				<i className="rightButton"></i>
-				<NavBar />
-				<IntroPage />
+
+				<BrowserRouter>
+					<Routes>
+						<Route path="/" element={<IntroPage />} />
+						<Route path="/home" element={<Home />} />
+						<Route path="/overview" element={<Overview />} />
+						<Route
+							path="/details/:id"
+							element={<MovieDetailsPage />}
+						/>
+						<Route
+							path="/trailer/:id"
+							element={<MovieTrailerPage />}
+						/>
+					</Routes>
+				</BrowserRouter>
 			</div>
-
-			<BrowserRouter>
-				{/* <SearchBar /> */}
-				{/* <Overview /> */}
-				{/* <MovieDetailsPage /> */}
-				{/* <Home /> */}
-
-				<Routes>
-					<Route path="/" element={<LandingPage />} />
-					<Route path="/home" element={<Home />} />
-					<Route path="/overview" element={<Overview />} />
-					<Route path="/details/:id" element={<MovieDetailsPage />} />
-					<Route path="/trailer/:id" element={<MovieTrailerPage />} />
-				</Routes>
-			</BrowserRouter>
 		</div>
 	);
 }
