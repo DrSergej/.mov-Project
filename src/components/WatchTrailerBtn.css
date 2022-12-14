@@ -1,0 +1,8 @@
+.trailer-button button {
+	padding: 10px 30px;
+	background-color: rgb(244, 22, 67);
+	border-radius: 15px;
+	border: none;
+	color: white;
+	font-size: 20px;
+}

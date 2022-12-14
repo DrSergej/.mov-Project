@@ -1,12 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import NavBar from "./components/NavBar";
+import SearchBar from "./components/SearchBar";
 import Home from "./pages/Home";
+import IntroPage from "./pages/IntroPage";
 import LandingPage from "./pages/LandingPage";
 import MovieDetailsPage from "./pages/MovieDetailsPage";
 import MovieTrailerPage from "./pages/MovieTrailerPage";
 import Overview from "./pages/Overview";
-import NavBar from "./components/NavBar";
-import IntroPage from "./pages/IntroPage";
 
 function App() {
 	return (
@@ -37,14 +38,19 @@ function App() {
 				<NavBar />
 				<IntroPage />
 			</div>
-			{/* <Home /> */}
+
 			<BrowserRouter>
+				{/* <SearchBar /> */}
+				{/* <Overview /> */}
+				{/* <MovieDetailsPage /> */}
+				{/* <Home /> */}
+
 				<Routes>
 					<Route path="/" element={<LandingPage />} />
 					<Route path="/home" element={<Home />} />
 					<Route path="/overview" element={<Overview />} />
-					<Route path="/details" element={<MovieDetailsPage />} />
-					<Route path="/trailer" element={<MovieTrailerPage />} />
+					<Route path="/details/:id" element={<MovieDetailsPage />} />
+					<Route path="/trailer/:id" element={<MovieTrailerPage />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

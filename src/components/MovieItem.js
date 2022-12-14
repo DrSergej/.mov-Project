@@ -28,7 +28,7 @@ const MovieItem = (props) => {
 				<div className="movie-data__wrapper">
 					<div className="flex-row__one">
 						<h2>{movieItemData?.title}</h2>
-						<p>⭐{movieItemData?.popularity?.toFixed(0)}</p>
+						<p>⭐{movieItemData?.vote_average?.toFixed(1)}</p>
 						<div>🔖</div>
 					</div>
 					<div className="item-details">
@@ -40,8 +40,10 @@ const MovieItem = (props) => {
 						</p>
 						<div className="genres">
 							<span>•</span>
-							{movieItemData?.genres?.map((elt) => {
-								return <p>{`|${elt.name}  `}</p>;
+							{movieItemData?.genres?.map((elt, index) => {
+								return (
+									<p key={index + elt}>{`|${elt.name}  `}</p>
+								);
 							})}
 						</div>
 						<p>
