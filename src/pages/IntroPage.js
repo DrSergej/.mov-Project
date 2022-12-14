@@ -1,6 +1,7 @@
 import "./IntroPage.css";
 import moviedblogo from "../imgs/ThemovieDBlogo.svg";
 import { useState, useEffect } from "react";
+import LandingPage from "./LandingPage";
 
 const IntroPage = () => {
   const [fadeClass, setFadeClass] = useState("appear");
@@ -16,7 +17,7 @@ const IntroPage = () => {
     return () => clearInterval(timeout);
   }, []);
   return (
-    <div className={`wrapper ${fadeClass}`}>
+    <div className="wrapper">
       <div className={`intro ${fadeClass}`}>
         <img
           src={moviedblogo}
@@ -56,6 +57,7 @@ const IntroPage = () => {
           Movies!
         </div>
       </div>
+      <LandingPage />
     </div>
   );
 };
