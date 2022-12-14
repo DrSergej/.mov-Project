@@ -1,6 +1,6 @@
 footer {
   position: absolute;
-  width: 524px;
+  width: 100%;
   bottom: 0px;
 }
 
@@ -63,7 +63,7 @@ nav .tubelight {
   border-radius: 5px;
   background: #fff;
   transition: left 400ms ease;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 nav .light-ray {

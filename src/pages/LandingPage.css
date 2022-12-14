@@ -1,0 +1,73 @@
+.landing-page {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 8;
+
+}
+
+.top {
+  position: relative;
+  height: 65%;
+  overflow: hidden;
+}
+
+.bottom {
+  position: relative;
+  height: 35%;
+  text-align: center;
+  background-color: white;
+}
+
+.front {
+  position: absolute;
+  background-color: yellow;
+  width: 60%;
+  height: 80%;
+  margin-left: 33%;
+  margin-top: 30%;
+  transform: rotate(5deg);
+  border: none;
+  border-radius: 20px 20px 0px 0px;
+  /* z-index: 1; */
+}
+
+.back {
+  position: absolute;
+  background-color: red;
+  width: 60%;
+  height: 90%;
+  left: 10%;
+  top: 18%;
+  transform: rotate(-5deg);
+  border: none;
+  border-radius: 20px 20px 0px 0px;
+}
+
+
+.landing-page .bottom h3 {
+
+  font-size: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.landing-page .bottom p {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 2rem;
+}
+
+.landing-page button {
+  padding: 1.4rem 4rem;
+  border: none;
+  background-color: red;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.landing-page button a {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}

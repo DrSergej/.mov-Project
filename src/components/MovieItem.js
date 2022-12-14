@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./MovieItem.css";
+import addfav from "../imgs/addfav.svg";
+import star from "../imgs/star.svg";
+
 const MovieItem = (props) => {
 	const [movieItemData, setMovieItemData] = useState({});
 	const [isLoading, setIsLoading] = useState(true);
