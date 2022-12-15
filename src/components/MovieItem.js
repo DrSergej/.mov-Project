@@ -20,7 +20,7 @@ const MovieItem = (props) => {
 		return <div>Loading...</div>;
 	}
 
-	console.log("movieItemData", movieItemData);
+	// console.log("movieItemData", movieItemData);
 	return (
 		<Link to={`/details/${props.id}`}>
 			<article className="movie-item">

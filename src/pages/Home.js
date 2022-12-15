@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import "./Home.css";
 import NavBar from "../components/NavBar";
-import SearchBar from "../components/SearchBar";
+import SearchBar2 from "../components/SearchBar2";
+import "./Home.css";
 const Home = () => {
 	const [data, setData] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 	useEffect(() => {
 		fetch(
-			"https://api.themoviedb.org/3/trending/all/day?api_key=c9819d6f1ebaa2ac8cd26baddb2dd923"
+			"https://api.themoviedb.org/3/trending/movie/week?api_key=c9819d6f1ebaa2ac8cd26baddb2dd923"
 		)
 			.then((res) => res.json())
 			.then((data) => setData(data.results));
@@ -21,8 +21,7 @@ const Home = () => {
 	console.log("Außerhalb: ", data);
 	return (
 		<div>
-			<NavBar />
-			<SearchBar />
+			<SearchBar2 data={[...data]} />
 			{/* <p>{data[0]?.genre_ids[0]}</p> */}
 			{data.map((elt, index) => {
 				return (
@@ -31,6 +30,7 @@ const Home = () => {
 					</p>
 				);
 			})}
+			<NavBar />
 		</div>
 	);
 };
