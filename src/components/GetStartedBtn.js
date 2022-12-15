@@ -5,7 +5,9 @@ const GetStartedBtn = () => {
 	return (
 		<Link to="/home">
 			<div className="get-started-btn">
-				<button> Get Started </button>
+				<button>
+					<span>Get Started</span>
+				</button>
 			</div>
 		</Link>
 	);

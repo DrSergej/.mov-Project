@@ -64,6 +64,7 @@ const SearchBar2 = (props) => {
 					className="input"
 					id="search-input"
 				/>
+
 				<button
 					type="reset"
 					className="search"

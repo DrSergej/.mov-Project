@@ -13,7 +13,7 @@ const LandingPage = () => {
 					Enjoy Your Movie <br /> Watch Everywhere
 				</h3>
 				<p>
-					Straem unlimited movies and TV shows <br />
+					Stream unlimited movies and TV shows <br />
 					on your phone, tablet, laptop and TV.
 				</p>
 				<GetStartedBtn />
