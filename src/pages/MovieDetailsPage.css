@@ -1,52 +1,53 @@
 .movie-details {
-	background-repeat: no-repeat;
-	background-position: top;
-	background-size: cover;
-	height: 60%;
-	width: 550px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 60%;
+  width: 550px;
+  border-radius: 35px 35px 0px 0px;
 }
 
 .movie-details .details-div {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 100%;
-	background: linear-gradient(
-		to top,
-		rgb(255, 255, 255) 40%,
-		rgba(255, 255, 255, 0.942) 10%,
-		rgba(255, 255, 255, 0.65),
-		transparent
-	);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100%;
+  background: linear-gradient(to top,
+      rgb(255, 255, 255) 40%,
+      rgba(255, 255, 255, 0.942) 10%,
+      /* rgba(255, 255, 255, 0.65), */
+      transparent);
+  padding-bottom: 100px;
 }
 
 .movie-details .genres-div,
 .languages-div {
-	display: flex;
-	gap: 10px;
+  display: flex;
+  gap: 15px;
 }
 
 .movie-details .date-runtime {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .movie-details .details-data-wrapper {
-	width: 90%;
-	margin: 10px auto;
+  width: 90%;
+  margin: 10px auto;
 }
+
 .movie-details span {
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 .movie-details .rating {
-	text-align: center;
-	margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .movie-details .description {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }

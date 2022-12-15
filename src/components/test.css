@@ -1,6 +1,6 @@
 .trending-header {
   display: flex;
-  margin-top: 60%;
+  margin-top: 55%;
   justify-content: space-between;
   align-items: baseline;
   padding-left: 10%;
@@ -16,7 +16,6 @@
 
 .carousel {
   position: absolute;
-  width: 80%;
   top: 45%;
   display: flex;
   justify-content: center;
@@ -37,7 +36,6 @@
 
 .carousel-item {
   position: absolute;
-  display: inline-block;
   opacity: 0;
   /* -webkit-transition: opacity 0.6s ease-out;
   transition: opacity 0.6s ease-out; */

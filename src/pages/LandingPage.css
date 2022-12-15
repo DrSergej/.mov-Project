@@ -57,17 +57,3 @@
   line-height: 3rem;
   margin-bottom: 2rem;
 }
-
-.landing-page button {
-  padding: 1.4rem 4rem;
-  border: none;
-  background-color: red;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
-.landing-page button a {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
-}

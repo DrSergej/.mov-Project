@@ -1,6 +1,6 @@
 footer {
   position: absolute;
-  width: 100%;
+  width: 100.5%;
   bottom: 0px;
 }
 
@@ -46,12 +46,16 @@ nav ul li a i {
   height: 100%;
   opacity: 0.4;
   transition: opacity 100ms ease;
-
 }
 
-nav ul li a.active i {
+/* nav ul li a.active i {
+  opacity: 1;
+} */
+
+nav ul li a i:hover {
   opacity: 1;
 }
+
 
 nav .tubelight {
   position: absolute;

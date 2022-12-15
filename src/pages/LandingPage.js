@@ -1,5 +1,5 @@
 import "./LandingPage.css";
-import { Link } from "react-router-dom";
+import GetStartedBtn from "../components/GetStartedBtn";
 
 const LandingPage = () => {
   return (
@@ -16,9 +16,7 @@ const LandingPage = () => {
           Strem unlimited movies and TV shows <br />
           on your phone, tablet,laptop and TV.
         </p>
-        <button>
-          <Link to="/overview">Get Started</Link>
-        </button>
+        <GetStartedBtn />
       </section>
     </div>
   );
