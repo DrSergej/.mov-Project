@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // import addfav from "../imgs/addfav.svg";
-import star from "../imgs/star.svg";
+// import star from "../imgs/star.svg";
 import "./MovieItem.css";
 
 const MovieItem = (props) => {
@@ -31,7 +31,10 @@ const MovieItem = (props) => {
 				<div className="movie-data__wrapper">
 					<div className="flex-row__one">
 						<h2>{movieItemData?.title}</h2>
-						<p>⭐{movieItemData?.vote_average?.toFixed(1)}</p>
+						<p>
+							<span className="star-span">⭐</span>
+							{movieItemData?.vote_average?.toFixed(1)}
+						</p>
 						<div className="favorit-img">
 							<p>📃</p>
 						</div>

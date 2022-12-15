@@ -16,7 +16,12 @@
 .movie-item h2 {
 	margin-bottom: 5px;
 	font-size: 2rem;
-	text-shadow: 2px 0px 3px rgb(87, 87, 87);
+
+	font-weight: bold;
+	color: #121212;
+
+	text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+		0px -4px 10px rgba(255, 255, 255, 0.3);
 	width: 100%;
 }
 
@@ -39,6 +44,18 @@
 	);
 
 	box-shadow: 4px 4px 6px black, 1px -1px 3px black;
+}
+
+.movie-item .star-span {
+	margin: 40px auto;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #121212;
+	text-align: center;
+	letter-spacing: 5px;
+	text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+		0px -4px 10px rgba(255, 255, 255, 0.3);
 }
 
 .movie-data__wrapper {
