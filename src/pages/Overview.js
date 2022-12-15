@@ -27,6 +27,7 @@ const Overview = () => {
   return (
     <div className="overview">
       <SearchBar2 />
+
       <div className="overview-items">
         {/* <p>{data[0]?.genre_ids[0]}</p> */}
         {data.map((elt, index) => {
