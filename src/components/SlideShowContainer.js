@@ -5,18 +5,18 @@ import { useState, useEffect } from "react";
 const SlideShowContainer = (props) => {
   const [movieItemData, setMovieItemData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${props.id}?api_key=c9819d6f1ebaa2ac8cd26baddb2dd923&language=en-US`
-    )
-      .then((res) => res.json())
-      .then((data) => setMovieItemData(data));
-    setIsLoading(false);
-  }, []);
+  // useEffect(() => {
+  //   fetch(
+  //     `https://api.themoviedb.org/3/movie/${props.id}?api_key=c9819d6f1ebaa2ac8cd26baddb2dd923&language=en-US`
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => setMovieItemData(data));
+  //   setIsLoading(false);
+  // }, []);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
   return (
     <>
       <article className="trending-header">
@@ -36,15 +36,15 @@ const SlideShowContainer = (props) => {
             hidden
             defaultChecked="checked"
           />
-          <div className="carousel-item">
+          {/* <div className="carousel-item">
             <Link to={`/details/${props.id}`}>
               <img
-                src={`https://image.tmdb.org/t/p/original${movieItemData?.poster_path}`}
-                alt={movieItemData.title}
+                src={`https://image.tmdb.org/t/p/original${props?.poster_path}`}
+                alt={props.name}
               />
             </Link>
-          </div>
-          {/* <input
+          </div> */}
+          <input
             className="carousel-open"
             type="radio"
             id="carousel-2"
@@ -67,7 +67,7 @@ const SlideShowContainer = (props) => {
           />
           <div className="carousel-item">
             <img src="http://fakeimg.pl/2000x800/F90/fff/?text=Carousel" />
-          </div> */}
+          </div>
           <label
             htmlFor="carousel-3"
             className="carousel-control prev control-1">

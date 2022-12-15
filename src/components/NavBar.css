@@ -21,6 +21,22 @@ nav {
   color: #fff;
 }
 
+/* nav {
+  position: absolute;
+  width: 100%;
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-radius: 0px 0px 34px 34px;
+  padding: 0 15px;
+  background: #000;
+  box-shadow: 0 6.7px 5.3px rgb(0 0 0 / 12%), 0 22.3px 17.9px rgb(0 0 0 / 8%), 0 100px 80px rgb(0 0 0 / 4%);
+  overflow: hidden;
+  color: #fff;
+  bottom: 0;
+  right: 130px;
+} */
+
 nav ul {
   height: 100%;
   display: flex;
