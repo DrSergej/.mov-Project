@@ -9,7 +9,7 @@ const SearchBar2 = (props) => {
 
 	console.log("props.data:", props.data);
 	console.log("props.data2:", props.data2);
-	console.log("props.onUpdate:", props.onUpdate2);
+	console.log("props.onUpdate2:", props.onUpdate2);
 
 	const expand = () => {
 		searchBtn.classList.toggle("close");
@@ -56,7 +56,7 @@ const SearchBar2 = (props) => {
 
 	return (
 		<section className="serach-bar-container">
-			<form onChange={suchAnfrage} id="content">
+			<form onSubmit={suchAnfrage} id="content">
 				<input
 					type="text"
 					name="input"

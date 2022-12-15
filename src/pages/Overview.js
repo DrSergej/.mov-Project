@@ -11,17 +11,22 @@ const Overview = () => {
 	// const [isLoading2, setIsLoading2] = useState(true);
 	let [childData, setChildData] = useState([]);
 
-	let status;
+	let status = null;
 
 	const updateData = (newData) => {
-		setChildData(newData);
+		setChildData([]);
 		status = document.getElementById("search-input")?.value;
+		if (status != null) {
+			setChildData(newData);
+			// document.getElementById("search-input").value = null;
+		}
+
 		// console.log(status != "");
 	};
-
+	console.log(status);
 	console.log(status != "");
 	console.log(status);
-	renderOverview();
+	// renderOverview();
 	useEffect(() => {
 		fetch(
 			"https://api.themoviedb.org/3/trending/movie/week?api_key=c9819d6f1ebaa2ac8cd26baddb2dd923"
@@ -42,14 +47,12 @@ const Overview = () => {
 	function renderOverview() {
 		return (
 			<div className="overview-items">
-				{status == ""
+				{childData.length == 0
 					? data.map((elt, index) => {
 							return <MovieItem key={index + elt} id={elt.id} />;
 					  })
-					: childData.map((elt, index) => {
-							return (
-								<MovieItem key={index + index} id={elt.id} />
-							);
+					: childData.map((e, index) => {
+							return <MovieItem key={index + index} id={e.id} />;
 					  })}
 
 				<NavBar />

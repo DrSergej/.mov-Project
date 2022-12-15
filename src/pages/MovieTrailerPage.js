@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./MovieTrailerPage.css";
 import NavBar from "../components/NavBar";
+import "./MovieTrailerPage.css";
 
 const MovieTrailerPage = () => {
 	const [movieTrailer, setMovieTrailer] = useState({});
@@ -33,7 +33,7 @@ const MovieTrailerPage = () => {
 							height="325"
 							src={`https://www.youtube.com/embed/${elt?.key}`}
 							title="Official Trailer"
-							// frameBorder="0"
+							frameBorder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowFullScreen
 						></iframe>
@@ -47,6 +47,7 @@ const MovieTrailerPage = () => {
 				/>
 				Your browser does not support the video tag.
 			</video> */}
+			<NavBar />;
 		</div>
 	);
 };
