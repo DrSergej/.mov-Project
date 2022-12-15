@@ -1,11 +1,11 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import "./SearchBar2.css";
-import NavBar from "./NavBar";
+// import NavBar from "./NavBar";
 
 const SearchBar2 = (props) => {
 	const input = document.getElementById("search-input");
 	const searchBtn = document.getElementById("search-btn");
-	const navigate = useNavigate();
+	// const navigate = useNavigate();
 	let arrUpdated = [];
 
 	console.log("props.data:", props.data);

@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
-import "./MovieTrailerPage.css";
-import NavBar from "../components/NavBar";
+import { Link, useParams } from "react-router-dom";
 import BackToOverviewBtn from "../components/BackToOverviewBtn";
+import NavBar from "../components/NavBar";
+import "./MovieTrailerPage.css";
 
 const MovieTrailerPage = () => {
 	const [movieTrailer, setMovieTrailer] = useState({});
@@ -33,7 +32,7 @@ const MovieTrailerPage = () => {
 				if (elt?.type === "Trailer") {
 					return (
 						<iframe
-							key={index + elt}
+							key={index + index + elt}
 							width="550"
 							height="325"
 							src={`https://www.youtube.com/embed/${elt?.key}`}
@@ -41,7 +40,7 @@ const MovieTrailerPage = () => {
 							frameBorder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowFullScreen
-						></iframe>
+						/>
 					);
 				}
 			})}

@@ -1,70 +1,72 @@
-import "./FilterBar.css";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import FilterResultPage from "../pages/FilterResultPage";
+import "./FilterBar.css";
 
 const FilterBar = () => {
-  const [isActive, setActive] = useState(false);
-  const toggle = () => {
-    setActive(!isActive);
-  };
-  const [loading, setLoading] = useState(true);
-  const [genres, setGenres] = useState([]);
-  const [btnValue, setBtnValue] = useState();
-  const genreValue = (e) => {
-    setBtnValue(e.target.value);
-  };
+	const [isActive, setActive] = useState(false);
+	const toggle = () => {
+		setActive(!isActive);
+	};
+	const [loading, setLoading] = useState(true);
+	const [genres, setGenres] = useState([]);
+	const [btnValue, setBtnValue] = useState();
+	const genreValue = (e) => {
+		setBtnValue(e.target.value);
+	};
 
-  useEffect(() => {
-    fetch(
-      "https://api.themoviedb.org/3/trending/movie/week?api_key=c9819d6f1ebaa2ac8cd26baddb2dd923"
-    )
-      .then((res) => res.json())
-      .then((data) => setGenres(data.results));
-    setLoading(false);
-  }, [btnValue]);
+	useEffect(() => {
+		fetch(
+			"https://api.themoviedb.org/3/trending/movie/week?api_key=c9819d6f1ebaa2ac8cd26baddb2dd923"
+		)
+			.then((res) => res.json())
+			.then((data) => setGenres(data.results));
+		setLoading(false);
+	}, [btnValue]);
 
-  useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/genre/movie/list?api_key=c9819d6f1ebaa2ac8cd26baddb2dd923&language=en-US`
-    )
-      .then((res) => res.json())
-      .then((data) => setGenres(data.genres));
-    // console.log(genres);
-  }, []);
-  return (
-    <section>
-      <div
-        id="burger-container"
-        className={isActive ? "open" : null}
-        onClick={toggle}>
-        <div id="burger">
-          <span> &nbsp;</span>
-          <span> &nbsp;</span>
-          <span> &nbsp;</span>
-          <span> &nbsp;</span>
-        </div>
-        {/* <div className={isActive ? "show" : "hide"} onClick={toggle}> */}
-        <div className="genres-grid">
-          {genres?.map((genre, index) => {
-            return (
-              <div key={index}>
-                <Link>
-                  <button
-                    onClick={genreValue}
-                    className={`buttons ${genre.name}`}
-                    value={genre.name}>
-                    {genre.name}
-                  </button>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <FilterResultPage filteredgenres={genres} />
-    </section>
-  );
+	useEffect(() => {
+		fetch(
+			`https://api.themoviedb.org/3/genre/movie/list?api_key=c9819d6f1ebaa2ac8cd26baddb2dd923&language=en-US`
+		)
+			.then((res) => res.json())
+			.then((data) => setGenres(data.genres));
+		// console.log(genres);
+	}, []);
+	return (
+		<section>
+			<div
+				id="burger-container"
+				className={isActive ? "open" : null}
+				onClick={toggle}
+			>
+				<div id="burger">
+					<span> &nbsp;</span>
+					<span> &nbsp;</span>
+					<span> &nbsp;</span>
+					<span> &nbsp;</span>
+				</div>
+				{/* <div className={isActive ? "show" : "hide"} onClick={toggle}> */}
+				<div className="genres-grid">
+					{genres?.map((genre, index) => {
+						return (
+							<div key={index}>
+								<Link>
+									<button
+										onClick={genreValue}
+										className={`buttons ${genre.name}`}
+										value={genre.name}
+									>
+										{genre.name}
+									</button>
+								</Link>
+							</div>
+						);
+					})}
+				</div>
+			</div>
+			<FilterResultPage filteredgenres={genres} />
+		</section>
+	);
 };
 
 export default FilterBar;

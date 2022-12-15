@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, Navigate, Router, useNavigate } from "react-router-dom";
+// import { Link, Navigate, Router, useNavigate } from "react-router-dom";
 import MovieItem from "../components/MovieItem";
 import NavBar from "../components/NavBar";
 import SearchBar2 from "../components/SearchBar2";
@@ -23,9 +23,9 @@ const Overview = () => {
 
 		// console.log(status != "");
 	};
-	console.log(status);
-	console.log(status != "");
-	console.log(status);
+	// console.log(status);
+	// console.log(status != "");
+	// console.log(status);
 	// renderOverview();
 	useEffect(() => {
 		fetch(
@@ -36,9 +36,9 @@ const Overview = () => {
 		setIsLoading(false);
 	}, []);
 
-	useEffect(() => {
-		renderOverview();
-	}, [childData]);
+	// useEffect(() => {
+	// 	renderOverview();
+	// }, []);
 
 	if (isLoading) {
 		return <div>Loading...</div>;
@@ -47,7 +47,7 @@ const Overview = () => {
 	function renderOverview() {
 		return (
 			<div className="overview-items">
-				{childData.length == 0
+				{childData.length === 0
 					? data.map((elt, index) => {
 							return <MovieItem key={index + elt} id={elt.id} />;
 					  })
