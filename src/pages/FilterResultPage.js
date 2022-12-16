@@ -8,7 +8,11 @@ const FilterResultPage = (props) => {
       {/* <SearchBar2 /> */}
       <div>
         {props.filteredgenres.map((ele, index) => {
-          return <MovieItem key={index} />;
+          {
+            {
+              /* return <MovieItem key={index} />; */
+            }
+          }
         })}
       </div>
     </>

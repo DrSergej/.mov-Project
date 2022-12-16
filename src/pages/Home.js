@@ -109,8 +109,8 @@ const Home = (props) => {
             </div>
           </div>
         </>
-        {/* <SearchBar2 />
-        <FilterBar /> */}
+        <SearchBar2 />
+        <FilterBar />
         {/* {data?.map((elt, index) => {
           return (
             <SlideShowContainer
