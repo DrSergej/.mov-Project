@@ -25,6 +25,7 @@ const Home = (props) => {
 		<div className="home-page">
 			<div>
 				<>
+					<h1 className="mov-title">.MOV</h1>
 					<article className="trending-header">
 						<h2>Trending Movies </h2>
 						<Link to="/overview">
@@ -124,8 +125,8 @@ const Home = (props) => {
 						</div>
 					</div>
 				</>
-				<SearchBar2 />
-				<FilterBar />
+				{/* <SearchBar2 />
+				<FilterBar /> */}
 				{/* {data?.map((elt, index) => {
           return (
             <SlideShowContainer

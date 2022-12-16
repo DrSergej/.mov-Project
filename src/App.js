@@ -3,10 +3,10 @@ import "./App.css";
 import Home from "./pages/Home";
 import IntroPage from "./pages/IntroPage";
 // import LandingPage from "./pages/LandingPage";
+import FilterResultPage from "./pages/FilterResultPage";
 import MovieDetailsPage from "./pages/MovieDetailsPage";
 import MovieTrailerPage from "./pages/MovieTrailerPage";
 import Overview from "./pages/Overview";
-import FilterResultPage from "./pages/FilterResultPage";
 
 function App() {
 	return (
@@ -18,7 +18,7 @@ function App() {
 				<div className="operator-icons">
 					<svg
 						stroke="currentColor"
-						fill="currentColor"
+						fill="black"
 						strokeWidth="0"
 						viewBox="0 0 512 512"
 						height="1em"
@@ -49,7 +49,7 @@ function App() {
 							element={<MovieTrailerPage />}
 						/>
 						<Route
-							path="/filterd"
+							path="/filtered"
 							element={<FilterResultPage />}
 						></Route>
 					</Routes>

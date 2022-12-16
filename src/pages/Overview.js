@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import FilterBar from "../components/FilterBar";
 // import { Link, Navigate, Router, useNavigate } from "react-router-dom";
 import MovieItem from "../components/MovieItem";
 import NavBar from "../components/NavBar";
@@ -81,6 +82,7 @@ const Overview = () => {
 
 	return (
 		<div className="overview">
+			<FilterBar />
 			<SearchBar2
 				data={[...data]}
 				data2={childData}

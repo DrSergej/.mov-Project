@@ -117,10 +117,10 @@ body {
 	top: 16px;
 	left: 30px;
 	font-size: 1.6rem;
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 	z-index: 10;
-	text-shadow: 2px 2px 3px rgb(0, 0, 0), -2px -2px 3px, 2px -2px 3px,
-		-2px 2px 3px;
+	/* text-shadow: 2px 2px 3px rgb(0, 0, 0), -2px -2px 3px, 2px -2px 3px,
+		-2px 2px 3px; */
 }
 
 .dynamic-island-camera {
@@ -143,14 +143,14 @@ body {
 	right: 70px;
 	font-size: 14px;
 	transition: all 0.2s;
-	color: white;
+	color: rgb(0, 0, 0);
 	z-index: 10;
 }
 
 .battery {
 	width: 30px;
 	height: 15px;
-	border: 2px solid white;
+	border: 2px solid rgb(0, 0, 0);
 	border-radius: 4px;
 	font-size: 10px;
 	text-align: center;

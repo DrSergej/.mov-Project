@@ -3,76 +3,80 @@
 } */
 
 #burger-container {
-  position: absolute;
-  top: 15%;
-  right: 6%;
+	position: absolute;
+	top: 7%;
+	left: 6%;
 }
 
 #burger {
-  cursor: pointer;
-  display: block;
+	cursor: pointer;
+	display: block;
 }
 
-
 #burger span {
-  background: rgb(244, 22, 67);
-  display: block;
-  width: 50px;
-  height: 5px;
-  margin-bottom: 5px;
-  position: relative;
-  top: 0;
-  transition: all ease-in-out 0.4s;
+	background: rgb(66, 66, 66);
+	display: block;
+	width: 50px;
+	height: 5px;
+	margin-bottom: 5px;
+	position: relative;
+	top: 0;
+	transition: all ease-in-out 0.4s;
+	box-shadow: 2px 2px 3px rgb(107, 107, 107);
 }
 
 #burger-container.open span:nth-child(2),
 #burger-container.open span:nth-child(3) {
-  width: 0;
-  opacity: 0;
-
+	width: 0;
+	opacity: 0;
 }
 
 #burger-container.open span:nth-child(1) {
-
-  transform: rotate(-45deg);
-  top: 18px;
+	transform: rotate(-45deg);
+	top: 18px;
 }
 
 #burger-container.open span:nth-child(4) {
-  transform: rotate(45deg);
-  top: -12px;
+	transform: rotate(45deg);
+	top: -12px;
 }
 
 .genres-grid-container-showMenu {
-  position: absolute;
-  gap: 1rem 7rem;
-  right: 0%;
-  top: 130%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: #000000;
-  padding: 5rem 5rem;
-  z-index: 11;
-
+	position: absolute;
+	gap: 1rem 7rem;
+	left: 0%;
+	top: 130%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: #3c3c3c;
+	padding: 5rem 5rem;
+	z-index: 11;
+	border-radius: 15px;
+	background-image: linear-gradient(
+		30deg,
+		#505050 0%,
+		#cbcbcb 54%,
+		#929292 97%
+	);
 }
 
 .genres-grid-container-hideMenu {
-  display: none;
+	display: none;
 }
 
 .buttons {
-  width: 150px;
-  padding: 1rem 2rem;
-  /* width: 100px; */
-  border-radius: 10px;
-  border: none;
-  font-size: 2rem;
+	width: 150px;
+	padding: 1rem 2rem;
+	/* width: 100px; */
+	border-radius: 10px;
+	border: none;
+	font-size: 2rem;
 }
 
 .ScienceFiction {
-  font-size: 1.4rem;
+	font-size: 1.4rem;
 }
 
 .genres-grid-container {
-  display: hidden;
+	display: hidden;
 }
