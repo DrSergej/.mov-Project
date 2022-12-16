@@ -1,3 +1,7 @@
+/* .filter-bar-wrapper {
+  position: relative;
+} */
+
 #burger-container {
   position: absolute;
   top: 15%;
@@ -37,4 +41,38 @@
 #burger-container.open span:nth-child(4) {
   transform: rotate(45deg);
   top: -12px;
+}
+
+.genres-grid-container-showMenu {
+  position: absolute;
+  gap: 1rem 7rem;
+  right: 0%;
+  top: 130%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #000000;
+  padding: 5rem 5rem;
+  z-index: 11;
+
+}
+
+.genres-grid-container-hideMenu {
+  display: none;
+}
+
+.buttons {
+  width: 150px;
+  padding: 1rem 2rem;
+  /* width: 100px; */
+  border-radius: 10px;
+  border: none;
+  font-size: 2rem;
+}
+
+.ScienceFiction {
+  font-size: 1.4rem;
+}
+
+.genres-grid-container {
+  display: hidden;
 }

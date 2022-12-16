@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import NavBar from "../components/NavBar";
-// import SearchBar2 from "../components/SearchBar2";
-// import FilterBar from "../components/FilterBar";
-import "./Home.css";
 import { Link } from "react-router-dom";
 import CarouselItem from "../components/CarouselItem";
+import FilterBar from "../components/FilterBar";
+import NavBar from "../components/NavBar";
+import SearchBar2 from "../components/SearchBar2";
+import "./Home.css";
 
 const Home = (props) => {
 	const [data, setData] = useState([]);
@@ -124,8 +124,8 @@ const Home = (props) => {
 						</div>
 					</div>
 				</>
-				{/* <SearchBar2 />
-        <FilterBar /> */}
+				<SearchBar2 />
+				<FilterBar />
 				{/* {data?.map((elt, index) => {
           return (
             <SlideShowContainer

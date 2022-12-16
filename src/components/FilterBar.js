@@ -11,6 +11,7 @@ const FilterBar = () => {
 	const [loading, setLoading] = useState(true);
 	const [genres, setGenres] = useState([]);
 	const [btnValue, setBtnValue] = useState();
+	// const [navbarOpen, setNavbarOpen] = useState(false);
 	const genreValue = (e) => {
 		setBtnValue(e.target.value);
 	};
@@ -33,7 +34,7 @@ const FilterBar = () => {
 		// console.log(genres);
 	}, []);
 	return (
-		<section>
+		<section className="filter-bar-wrapper">
 			<div
 				id="burger-container"
 				className={isActive ? "open" : null}
@@ -46,14 +47,21 @@ const FilterBar = () => {
 					<span> &nbsp;</span>
 				</div>
 				{/* <div className={isActive ? "show" : "hide"} onClick={toggle}> */}
-				<div className="genres-grid">
+				<div
+					className={`genres-grid-container-${
+						isActive ? "showMenu" : "hideMenu"
+					}`}
+				>
 					{genres?.map((genre, index) => {
 						return (
-							<div key={index}>
+							<div key={index} className="genere-container">
 								<Link>
 									<button
 										onClick={genreValue}
-										className={`buttons ${genre.name}`}
+										className={`buttons ${genre.name.replace(
+											" ",
+											""
+										)}`}
 										value={genre.name}
 									>
 										{genre.name}
