@@ -43,7 +43,10 @@ const Home = (props) => {
 								hidden
 								defaultChecked="checked"
 							/>
-							{data?.map((elt, index) => {
+							{data.map((elt, index) => {
+								if (index > 2) {
+									return;
+								}
 								return (
 									<CarouselItem
 										key={index + elt}
@@ -51,7 +54,7 @@ const Home = (props) => {
 										name={elt.title}
 										poster_path={elt.poster_path}
 										rate={elt.vote_average}
-										index={index}
+										index={index + 1}
 									/>
 								);
 							})}
