@@ -9,12 +9,13 @@ const SearchBar2 = (props) => {
 	let arrUpdated = [];
 
 	console.log("props.data:", props.data);
-	console.log("props.data2:", props.data2);
+	// console.log("props.data2:", props.data2);
 	console.log("props.onUpdate2:", props.onUpdate2);
 
 	const expand = () => {
 		searchBtn.classList.toggle("close");
 		input.classList.toggle("square");
+		updateData(arrUpdated);
 	};
 
 	function suchAnfrage(event) {
@@ -50,7 +51,7 @@ const SearchBar2 = (props) => {
 	// 		) {
 	// 			navigate(`/details/${elt.id}`);
 
-	// 			// return console.log("suchAnfrage:", elt);
+	// return console.log("suchAnfrage:", elt);
 	// 		}
 	// 	});
 	// }

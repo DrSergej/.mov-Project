@@ -42,9 +42,11 @@ const FilterBar = () => {
 	}
 
 	const genreSearch = (e) => {
+		// const hideOverview = document.querySelector(".overview-items");
 		console.log("buttonValue: ", e.target.value);
 		trendingMovies.map((elt) => {
 			if (elt.genre_ids.includes(Number(e.target.value))) {
+				// hideOverview.classList.add("hiddden");
 				arrSortedByGenre.push(elt);
 				setGenreArray(arrSortedByGenre);
 			}
@@ -99,10 +101,10 @@ const FilterBar = () => {
 					})}
 				</div>
 			</div>
-			{/* <FilterResultPage
+			<FilterResultPage
 				filteredgenres={genreArray}
 				movieList={[...trendingMovies]}
-			/> */}
+			/>
 		</section>
 	);
 };

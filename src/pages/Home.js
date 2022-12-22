@@ -6,7 +6,7 @@ import NavBar from "../components/NavBar";
 import SearchBar2 from "../components/SearchBar2";
 import "./Home.css";
 
-const Home = (props) => {
+const Home = () => {
 	const [data, setData] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 	useEffect(() => {
@@ -14,13 +14,20 @@ const Home = (props) => {
 			"https://api.themoviedb.org/3/trending/movie/week?api_key=c9819d6f1ebaa2ac8cd26baddb2dd923"
 		)
 			.then((res) => res.json())
-			.then((data) => setData(data.results));
-		setIsLoading(false);
+			.then((response) => {
+				setData((elt) => {
+					return [...elt, ...response.results];
+				});
+				setIsLoading(false);
+			});
 	}, []);
 
 	if (isLoading) {
 		return <div>Loading...</div>;
 	}
+
+	// console.log("HOME-Movie-Week: ", data);
+
 	return (
 		<div className="home-page">
 			<div>
@@ -43,7 +50,10 @@ const Home = (props) => {
 								hidden
 								defaultChecked="checked"
 							/>
-							{data?.map((elt, index) => {
+							{/* {isLoading === false && renderCarrousell()} */}
+							{data.map((elt, index) => {
+								if (index <= 2)
+									console.log("Mapping:", elt, index);
 								return (
 									<CarouselItem
 										key={index + elt}
@@ -125,8 +135,8 @@ const Home = (props) => {
 						</div>
 					</div>
 				</>
-				{/* <SearchBar2 />
-				<FilterBar /> */}
+				<SearchBar2 />
+				<FilterBar />
 				{/* {data?.map((elt, index) => {
           return (
             <SlideShowContainer

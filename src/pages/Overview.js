@@ -12,7 +12,7 @@ const Overview = () => {
 	// const [isLoading2, setIsLoading2] = useState(true);
 	let [childData, setChildData] = useState([]);
 
-	let status = null;
+	let status = document.getElementById("search-input")?.value;
 
 	const updateData = (newData) => {
 		setChildData([]);
@@ -37,23 +37,42 @@ const Overview = () => {
 		setIsLoading(false);
 	}, []);
 
-	// useEffect(() => {
-	// 	renderOverview();
-	// }, []);
+	useEffect(() => {
+		renderOverview();
+	}, [status]);
 
 	if (isLoading) {
 		return <div>Loading...</div>;
 	}
+	/*const myTimeout = setTimeout(checkInput, 500);
+	function checkInput() {
+		const inputField = document.getElementById("search-input");
+		if (document.getElementsByClassName("search close") && status == "") {
+			inputField.dispatchEvent(
+				new KeyboardEvent("keydown", { key: "Enter" })
+			);
+			// console.log("ENTER");
+		} else {
+			 clearTimeout(myTimeout);
+			console.log("CLEARED");
+		}
+	} */
 
 	function renderOverview() {
 		return (
 			<div className="overview-items">
-				{childData.length === 0
+				{childData.length === 0 || status == ""
 					? data.map((elt, index) => {
 							return <MovieItem key={index + elt} id={elt.id} />;
 					  })
 					: childData.map((e, index) => {
-							return <MovieItem key={index + index} id={e.id} />;
+							if (index < childData.length) {
+								return (
+									<MovieItem key={index + index} id={e.id} />
+								);
+							} else {
+								// setChildData(data);
+							}
 					  })}
 
 				<NavBar />
@@ -85,7 +104,7 @@ const Overview = () => {
 			<FilterBar />
 			<SearchBar2
 				data={[...data]}
-				data2={childData}
+				// data2={childData}
 				onUpdate2={updateData}
 			/>
 

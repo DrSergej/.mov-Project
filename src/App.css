@@ -168,3 +168,7 @@ a {
 	text-decoration: none;
 	color: black;
 }
+
+.hiddden {
+	display: none;
+}
