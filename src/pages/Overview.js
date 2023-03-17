@@ -101,7 +101,7 @@ const Overview = () => {
 
 	return (
 		<div className="overview">
-			<FilterBar />
+		{/*<FilterBar />*/}
 			<SearchBar2
 				data={[...data]}
 				// data2={childData}
