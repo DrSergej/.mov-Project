@@ -16,6 +16,7 @@ const SearchBar2 = (props) => {
 		searchBtn.classList.toggle("close");
 		input.classList.toggle("square");
 		updateData(arrUpdated);
+		input.focus()
 	};
 
 	function suchAnfrage(event) {
